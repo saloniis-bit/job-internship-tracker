@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job & Internship Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Job & Internship Tracker</h1>
+    <p>Track your applications, interviews and offers.</p>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="stat-card">
+        <h3>Total Applications</h3>
+        <p id="totalCount">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Interviews</h3>
+        <p id="interviewCount">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Offers</h3>
+        <p id="offerCount">0</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Add New Application</h2>
+
+      <form id="jobForm">
+        <input
+          type="text"
+          id="company"
+          placeholder="Company Name"
+          required
+        />
+
+        <input
+          type="text"
+          id="role"
+          placeholder="Job / Internship Role"
+          required
+        />
+
+        <select id="type">
+          <option value="Internship">Internship</option>
+          <option value="Job">Job</option>
+        </select>
+
+        <select id="status">
+          <option value="Applied">Applied</option>
+          <option value="Interview">Interview</option>
+          <option value="Rejected">Rejected</option>
+          <option value="Offer">Offer</option>
+        </select>
+
+        <input type="date" id="date" required />
+
+        <button type="submit">Add Application</button>
+      </form>
+    </section>
+
+    <section class="filter-section">
+      <h2>My Applications</h2>
+
+      <div class="filters">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search company or role..."
+        />
+
+        <select id="filterStatus">
+          <option value="All">All Status</option>
+          <option value="Applied">Applied</option>
+          <option value="Interview">Interview</option>
+          <option value="Rejected">Rejected</option>
+          <option value="Offer">Offer</option>
+        </select>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Type</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="jobList"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Job & Internship Tracker | Developed by a Computer Science Student</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
